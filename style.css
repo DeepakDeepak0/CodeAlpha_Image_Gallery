@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Itim&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Itim", cursive;
+  scroll-behavior: smooth;
+}
+
+.galleryOverlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  opacity: 0.5;
+  background-color: black;
+  display: none;
+}
+
+.imgBox {
+  position: fixed;
+  width: 50%;
+  height: 50%;
+  left: 25%;
+  top: 25%;
+  transition: ease-in-out;
+  transition-duration: 1.5s;
+  transform: scale(0);
+  z-index: 1;
+}
+.imgBox img {
+  width: 100%;
+  border: 0.5px solid black;
+  border-radius: 10px;
+  box-shadow: 0 0 100px white;
+}
+.imgBox span {
+  position: absolute;
+  right: 0%;
+  font-size: 4rem;
+  padding-inline: 1.2rem;
+  padding-bottom: 0.4rem;
+  cursor: pointer;
+  color: red;
+}
+
+.main-container {
+  width: 100vw;
+  height: 100%;
+  background-color: blueviolet;
+}
+
+#heading {
+  text-align: center;
+  font-size: 60px;
+  padding-top: 40px;
+  color: red;
+  text-shadow: 0 0 10px wheat;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  padding-block: 60px;
+  padding-inline: 10px;
+}
+
+.items {
+  flex-basis: 23%;
+  height: 220px;
+  margin: 1%;
+  transition: all 0.6s ease-in;
+}
+.items:hover {
+  transform: scale(1.1);
+}
+
+.items img {
+  width: 100%;
+  height: 220px;
+  border: 0.5px solid black;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px white;
+}
+
+.galleryOverlayShow {
+  display: block;
+}
+.imgBoxShow {
+  transform: scale(1);
+}
+
+@media screen and (max-width: 768px) {
+  .items {
+    flex-basis: 100%;
+    padding-inline: 5px;
+    padding-block: 20px;
+  }
+  .imgBox {
+    position: fixed;
+    width: 90%;
+    height: 20%;
+    left: 5%;
+    top: 40%;
+  }
+  #heading {
+    padding-top: 70px;
+  }
+  .items:hover {
+    transform: none;
+  }
+}
